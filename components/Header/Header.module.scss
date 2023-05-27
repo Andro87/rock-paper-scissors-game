@@ -1,0 +1,52 @@
+@use "styles/helpers" as *;
+
+.header {
+    border: 3px solid var(--header-outline);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    @include container($large);
+    @include breakpoint($large) {
+        border-radius: 15px;
+        padding: 18px 24px;
+    }
+    img {
+        width: 83px;
+        height: auto;
+        @include breakpoint($large) {
+            width: 155px;
+        }
+    }
+}
+
+.score_container {
+    background: var(--score-box);
+    border-radius: 4px;
+    color: var(--score-point);
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding: 10px 22px;
+    @include breakpoint($small) {
+        font-size: 2.5rem;
+    }
+    @include breakpoint($large) {
+        border-radius: 8px;
+        padding: 16px 48px;
+    }
+
+    span {
+        color: var(--score-text);
+        font-size: 0.625rem;
+        font-weight: 600;
+        line-height: 0.75rem;
+        letter-spacing: 1.5625px;
+        text-transform: uppercase;
+        display: block;
+        @include breakpoint($large) {
+            font-size: 0.8rem;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@use "styles/helpers" as *;
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+
+    @include breakpoint($small) {
+        font-size: 3.5rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}

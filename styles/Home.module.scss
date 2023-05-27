@@ -1,0 +1,23 @@
+@use "styles/helpers" as *;
+.home_container {
+    background: var(--main-background);
+    position: relative;
+    min-height: 100vh;
+    padding-top: 32px;
+    padding-bottom: 56px;
+    @include breakpoint($large) {
+        padding: 48px 32px 32px;
+    }
+}
+
+.home_container_bg {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.8;
+        background: var(--main-background);
+        z-index: 2;
+    }
+}

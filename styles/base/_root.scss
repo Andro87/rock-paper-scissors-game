@@ -1,0 +1,57 @@
+:root {
+    --main-background: radial-gradient(
+        134.34% 134.34% at 50% 0%,
+        hsl(214, 47%, 23%) 0%,
+        hsl(237, 49%, 15%)
+    );
+    --header-outline: hsla(0, 0%, 100%, 0.29);
+    --score-text: hsla(230, 64%, 46%, 1);
+    --score-point: hsla(247, 10%, 37%, 1);
+    --score-box: linear-gradient(
+        0deg,
+        hsla(0, 0%, 95%, 1) 0%,
+        hsla(0, 0%, 100%, 1) 100%
+    );
+
+    --light-text: hsla(0, 0%, 100%, 1);
+
+    --dark-text: hsla(228, 25%, 31%, 1);
+
+    --rules-box: hsla(0, 0%, 100%, 1);
+
+    --house-initial: hsla(0, 0%, 0%, 0.1);
+
+    /*options*/
+
+    --paper-gradient: linear-gradient(
+        to top,
+        hsl(230, 89%, 62%),
+        hsl(230, 89%, 65%)
+    );
+    --paper-shadow: hsla(230, 64%, 46%, 1);
+
+    --scissors-gradient: linear-gradient(
+        to top,
+        hsl(39, 89%, 49%),
+        hsl(40, 84%, 53%)
+    );
+    --scissors-shadow: hsla(28, 77%, 44%, 1);
+
+    --rock-gradient: linear-gradient(
+        to top,
+        hsl(349, 71%, 52%),
+        hsl(349, 70%, 56%)
+    );
+    --rock-shadow: hsla(347, 75%, 35%, 1);
+
+    /**/
+
+    --icon-box-gradient: linear-gradient(
+        0deg,
+        hsla(0, 0%, 95%, 1) 0%,
+        hsla(0, 0%, 85%, 1) 98.34%
+    );
+
+    --icon-shadow: hsla(230, 23%, 78%, 1);
+    --accent-color: hsla(349, 71%, 52%, 1);
+}

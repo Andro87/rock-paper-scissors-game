@@ -1,0 +1,170 @@
+@use "styles/helpers" as *;
+
+.option_container {
+    width: 60px;
+    height: 63px;
+    border-radius: 50%;
+    display: flex;
+
+    @include breakpoint($small) {
+        width: 130px;
+        height: 133px;
+    }
+    @include breakpoint($large) {
+        width: 198px;
+        height: 203px;
+    }
+}
+
+.icon_container {
+    width: 45px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    background: var(--icon-box-gradient);
+    box-shadow: 0px -3px 0px 0px var(--icon-shadow);
+    @include breakpoint($small) {
+        width: 100px;
+        height: 94px;
+        box-shadow: 0px -5px 0px 0px var(--icon-shadow);
+    }
+    @include breakpoint($large) {
+        width: 152px;
+        height: 144px;
+    }
+    svg {
+        margin: auto;
+    }
+    img {
+        width: 60%;
+        height: auto;
+        margin: auto;
+    }
+}
+
+.paper,
+.scissors,
+.rock {
+    @include transition;
+}
+
+.paper {
+    background: var(--paper-gradient);
+    box-shadow: 0px 3px 0px 0px var(--paper-shadow);
+
+    @include breakpoint($small) {
+        box-shadow: 0px 5px 0px 0px var(--paper-shadow);
+    }
+
+    &:hover {
+        cursor: pointer;
+        @include breakpoint($small) {
+            box-shadow: 0px 5px 0px 0px var(--paper-shadow),
+                0 0 0 30px hsla(0, 0%, 100%, 0.08);
+        }
+    }
+}
+
+.paper_position {
+    position: relative;
+    top: -30px;
+    left: -25px;
+    @include breakpoint($small) {
+        top: -65px;
+        left: -30px;
+    }
+}
+
+.scissors {
+    background: var(--scissors-gradient);
+    box-shadow: 0px 3px 0px 0px var(--scissors-shadow);
+    @include breakpoint($small) {
+        box-shadow: 0px 5px 0px 0px var(--scissors-shadow);
+    }
+    &:hover {
+        cursor: pointer;
+        @include breakpoint($small) {
+            box-shadow: 0px 5px 0px 0px var(--scissors-shadow),
+                0 0 0 30px hsla(0, 0%, 100%, 0.08);
+        }
+    }
+}
+.scissors_position {
+    margin-left: auto;
+    position: relative;
+    top: -30px;
+    right: -25px;
+    @include breakpoint($small) {
+        top: -65px;
+        right: -30px;
+    }
+}
+
+.rock {
+    background: var(--rock-gradient);
+    box-shadow: 0px 3px 0px 0px var(--rock-shadow);
+    @include breakpoint($small) {
+        box-shadow: 0px 5px 0px 0px var(--rock-shadow);
+    }
+    &:hover {
+        cursor: pointer;
+        @include breakpoint($small) {
+            box-shadow: 0px 5px 0px 0px var(--rock-shadow),
+                0 0 0 30px hsla(0, 0%, 100%, 0.08);
+        }
+    }
+}
+
+.rock_position {
+    margin: auto;
+    position: relative;
+    top: 15px;
+}
+
+.isWinner {
+    position: relative;
+    &:before {
+        content: "";
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        opacity: 0;
+        animation: winner 0.5s 1.9s ease-in forwards;
+        box-shadow: 0 0 0 20px hsla(0, 0%, 100%, 0.08),
+            0 0 0 40px hsla(0, 0%, 100%, 0.05),
+            0 0 0 60px hsla(0, 0%, 100%, 0.03), 0 0 0 80px hsla(0, 0%, 100%, 0);
+
+        @include breakpoint($small) {
+            box-shadow: 0 0 0 40px hsla(0, 0%, 100%, 0.08),
+                0 0 0 80px hsla(0, 0%, 100%, 0.05),
+                0 0 0 120px hsla(0, 0%, 100%, 0.03),
+                0 0 0 160px hsla(0, 0%, 100%, 0);
+        }
+    }
+}
+
+.option_isNotBtn {
+    pointer-events: none;
+}
+
+@keyframes after {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes winner {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,31 @@
+@use "styles/helpers" as *;
+
+.footer {
+    display: flex;
+}
+
+.btn_rules {
+    border: 1px solid var(--light-text);
+    border-radius: 8px;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    color: var(--light-text);
+    padding: 0.5em 1.5em;
+    margin: auto;
+    @include transition;
+    @include breakpoint($small) {
+        font-size: 1rem;
+    }
+    @include breakpoint($large) {
+        margin: initial;
+        margin-left: auto;
+    }
+    &:hover {
+        background-color: var(--light-text);
+        color: var(--dark-text);
+    }
+}
