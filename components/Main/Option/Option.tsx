@@ -3,7 +3,7 @@ import styles from "./Option.module.scss";
 
 interface Props {
     readonly icon: string;
-    readonly option_color: string;
+    readonly option: string;
     readonly position?: string;
     readonly onChoice?: () => void;
     readonly isWinner?: boolean;
@@ -11,12 +11,11 @@ interface Props {
 }
 
 export const Option: React.FunctionComponent<Props> = props => {
-    const { icon, option_color, position, onChoice, isWinner, isNotBtn } =
-        props;
+    const { icon, option, position, onChoice, isWinner, isNotBtn } = props;
 
     return (
         <div
-            className={`${styles.option_container} ${styles[option_color]} 
+            className={`${styles.option_container} ${styles[option]} 
             ${position && styles[position]}  ${isWinner && styles.isWinner} ${
                 isNotBtn && styles.option_isNotBtn
             }`}
@@ -25,7 +24,7 @@ export const Option: React.FunctionComponent<Props> = props => {
             }}
         >
             <div className={styles.icon_container}>
-                <img src={icon} alt="" />
+                <img src={icon} alt={option} />
             </div>
         </div>
     );

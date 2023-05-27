@@ -37,7 +37,7 @@ export const Main: React.FunctionComponent<Props> = props => {
             <Option
                 key={option.id}
                 icon={option.icon}
-                option_color={option.choice}
+                option={option.choice}
                 position={option.position}
                 onChoice={() => {
                     onGameResult(option.choice);
@@ -63,7 +63,7 @@ export const Main: React.FunctionComponent<Props> = props => {
                             {userChoice && (
                                 <Option
                                     icon={userChoice.icon}
-                                    option_color={userChoice.choice}
+                                    option={userChoice.choice}
                                     isWinner={userResult}
                                     isNotBtn={isNotBtn}
                                 />
@@ -79,7 +79,7 @@ export const Main: React.FunctionComponent<Props> = props => {
                             {houseChoice && (
                                 <Option
                                     icon={houseChoice.icon}
-                                    option_color={houseChoice.choice}
+                                    option={houseChoice.choice}
                                     isWinner={houseResult}
                                     isNotBtn={isNotBtn}
                                 />
